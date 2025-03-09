@@ -73,6 +73,7 @@ while running:
             if piece_dragging:
                 piece_dragging = False
                 piece_col, piece_row = x // SQUARE_SIZE, y // SQUARE_SIZE
+                piece_x, piece_y = piece_col * SQUARE_SIZE + 12, piece_row * SQUARE_SIZE + 12
                 if piece_col == target_col and piece_row == target_row:
                     score += 1
                     reset_piece()
@@ -83,4 +84,5 @@ while running:
             piece_y -= 25
 
 pygame.quit()
+
 
